@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: 'Inter', sans-serif;
+  --color-navy: #1B2A4A;
+  --color-navy-light: #2C3E6B;
+  --color-navy-dark: #0F1A30;
+  --color-gold: #D4A843;
+  --color-gold-light: #E8C76A;
+  --color-gold-dark: #B8922E;
+  --color-cream: #F8F6F0;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.chatbot-enter {
+  animation: fade-in-up 0.3s ease-out;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #D4A843, #F5D78E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-btn {
+  background: linear-gradient(135deg, #D4A843 0%, #B8922E 100%);
+  transition: all 0.3s ease;
+}
+
+.gradient-btn:hover {
+  background: linear-gradient(135deg, #E8C76A 0%, #D4A843 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(212, 168, 67, 0.3);
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(27, 42, 74, 0.1);
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #0F1A30 0%, #1B2A4A 50%, #2C3E6B 100%);
+}
+
+.mesh-gradient {
+  background: radial-gradient(ellipse at top right, rgba(212, 168, 67, 0.08) 0%, transparent 50%),
+              radial-gradient(ellipse at bottom left, rgba(27, 42, 74, 0.05) 0%, transparent 50%);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
